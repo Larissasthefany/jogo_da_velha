@@ -1,8 +1,11 @@
 import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
+    const style = {
+        color: value === 'X' ? 'blue' : 'green'
+    }
     return (
-        <button className="square" onClick={onSquareClick}>
+        <button className="square" onClick={onSquareClick} style={style}>
             {value}
         </button>
     );
